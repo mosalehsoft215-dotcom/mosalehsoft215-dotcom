@@ -65,6 +65,6 @@ I take ownership of the whole path, from framing the problem and preparing the d
 <br />
 <br />
 
-<sub>This page is drawn by <a href="./scripts/refresh.py"><code>scripts/refresh.py</code></a>; the Projects section is rebuilt by GitHub Actions whenever a public repository is added or updated.</sub>
+<sub>This page is drawn by <a href="./scripts/refresh.py"><code>scripts/refresh.py</code></a>; the Projects section is rebuilt daily by GitHub Actions from the public repositories.</sub>
 
 </div>
