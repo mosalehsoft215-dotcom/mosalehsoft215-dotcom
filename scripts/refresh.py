@@ -31,7 +31,7 @@ INK, MUTED, DIM, RULE = "#F8FAFC", "#94A3B8", "#64748B", "#1E2A3D"
 BLUE, TEAL, VIOLET, ORANGE, AMBER, PINK = "#4D7CFE", "#2DD4BF", "#9B7CFF", "#F0883E", "#FBBF24", "#F472B6"
 LANG_COLOR = {"Python": "#3572A5", "Jupyter Notebook": "#DA5B0B", "JavaScript": "#F1E05A", "TypeScript": "#3178C6",
               "C++": "#F34B7D", "C#": "#178600", "Java": "#B07219", "HTML": "#E34C26", "CSS": "#663399",
-              "Shell": "#89E051", "Go": "#00ADD8", "Rust": "#DEA584", "Scala": "#C22D40"}
+              "Shell": "#89E051", "Go": "#00ADD8", "Rust": "#DEA584", "Scala": "#C22D40", "Dockerfile": "#2496ED"}
 
 CAPABILITIES = [
     ("AGENTIC AI SYSTEMS", VIOLET, ["Multi-agent orchestration, planning,", "memory and tool use, wired to real", "APIs through MCP, GraphQL and REST."]),
@@ -48,6 +48,23 @@ DELIVERY = [
     ("04", "INTEGRATE", ORANGE, ["Wrap models in APIs,", "agents and tools that", "fit existing systems."]),
     ("05", "SHIP", AMBER, ["Deploy, monitor and", "support real users", "in production."]),
     ("06", "MEASURE", PINK, ["Evaluate against the", "target, learn and", "iterate."]),
+]
+WORK = [  # private repositories: shown as cards without links, no company or client names
+    {"slug": "travel-booking-agents", "name": "Travel Booking Agents", "language": "Python",
+     "description": "Router and specialist LLM agents for B2B travel over MCP tools, with role permissions, graph memory and evals.",
+     "topics": ["multi-agent", "mcp", "graphql"]},
+    {"slug": "travel-docparser-ai", "name": "Travel DocParser AI", "language": "Python",
+     "description": "Turns PDFs and photos of travel documents into validated, enriched JSON with VLM OCR and a LangGraph agent.",
+     "topics": ["document-ai", "langgraph", "fastapi"]},
+    {"slug": "agentic-travel-backend", "name": "Agentic Travel Backend", "language": "Python",
+     "description": "Agent harness with an orchestrator, an MCP tool service, per-agent models, run logging and an evaluation library.",
+     "topics": ["agent-harness", "mcp", "evals"]},
+    {"slug": "agentic-price-aggregator", "name": "Agentic Price Aggregator", "language": "Python",
+     "description": "Multi-site price aggregation: cache, then self-healing browser replay, then LLM browser agents only when needed.",
+     "topics": ["llm-agents", "playwright", "scraping"]},
+    {"slug": "platform-infrastructure", "name": "Platform Infrastructure", "language": "Dockerfile",
+     "description": "One-command local platform that mirrors production: gateway, queues, database, object storage and SSO.",
+     "topics": ["docker", "traefik", "keycloak"]},
 ]
 TOOLS = [
     ("LANGUAGES", BLUE, ["Python", "SQL", "JavaScript", "C++", "Java", "C#"]),
@@ -244,14 +261,18 @@ def toolbox():
 
 
 # ------------------------------------------------------------------ project card
-def project_card(p):
+def project_card(p, kicker="PROJECT", private=False):
     W, H = 600, 210
     b = [panel(W, H, "p", 18)]
     col = LANG_COLOR.get(p["language"], "#8B949E")
     b.append(f'  <rect x=".5" y=".5" width="{W - 1}" height="4" rx="2" fill="{col}"/>')
-    b.append("  " + text(32, 46, "PROJECT", 10.5, TEAL, MONO, 700, 2.4))
-    b.append(f'  <path d="M{W - 50} 36 l8 8 l-8 8 M{W - 42} 44 h-16" stroke="{MUTED}" stroke-width="1.8" stroke-linecap="round" '
-             'stroke-linejoin="round" fill="none"/>')
+    b.append("  " + text(32, 46, kicker, 10.5, AMBER if private else TEAL, MONO, 700, 2.4))
+    if private:  # padlock
+        b.append(f'  <rect x="{W - 54}" y="38" width="18" height="14" rx="3" stroke="{MUTED}" stroke-width="1.8" fill="none"/>'
+                 f'<path d="M{W - 50} 38 v-4 a5 5 0 0 1 10 0 v4" stroke="{MUTED}" stroke-width="1.8" fill="none"/>')
+    else:
+        b.append(f'  <path d="M{W - 50} 36 l8 8 l-8 8 M{W - 42} 44 h-16" stroke="{MUTED}" stroke-width="1.8" stroke-linecap="round" '
+                 'stroke-linejoin="round" fill="none"/>')
     b.append("  " + text(32, 84, p["name"], 24, INK, SANS, 800, -0.2))
     desc = p["description"] or "Source code, setup and usage notes in the repository."
     for k, ln in enumerate(textwrap.wrap(desc, 62)[:3]):
@@ -261,8 +282,9 @@ def project_card(p):
         b.append(f'  <circle cx="{x + 6}" cy="186" r="6" fill="{col}"/>')
         b.append("  " + text(x + 18, 191, p["language"], 13, "#CBD5E1", SANS, 600))
         x += 18 + len(p["language"]) * 7.4 + 22
-    b.append("  " + text(f"{x:.0f}", 191, f"★ {p['stars']}", 13, "#CBD5E1", SANS, 600))
-    x += 52
+    if not private:
+        b.append("  " + text(f"{x:.0f}", 191, f"★ {p['stars']}", 13, "#CBD5E1", SANS, 600))
+        x += 52
     for t in p["topics"]:
         w = len(t) * 6.9 + 22
         if x + w > W - 28:
@@ -285,6 +307,14 @@ def badge(label, msg, col):
             f'font-weight="700" letter-spacing="1" fill="#fff">{esc(label)}</text>'
             f'<text x="{lw + mw / 2:.1f}" y="19.5" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" '
             f'font-size="11" font-weight="700" letter-spacing="1" fill="#fff">{esc(msg)}</text></svg>\n')
+
+
+def work_block(stamp):
+    lines = ['<p align="center">']
+    for w in WORK:
+        lines.append(f'  <img src="./assets/work/{w["slug"]}.svg?v={stamp}" width="49%" alt="{esc(w["name"])}: {esc(w["description"])}" />')
+    lines.append("</p>")
+    return "\n".join(lines)
 
 
 def projects_block(ps, stamp):
@@ -326,7 +356,15 @@ def main():
         (ASSETS / name).write_text(content, encoding="utf-8", newline="\n")
     for p in ps:
         (ASSETS / "projects" / f"{p['name']}.svg").write_text(project_card(p), encoding="utf-8", newline="\n")
+    (ASSETS / "work").mkdir(exist_ok=True)
+    for f in (ASSETS / "work").glob("*.svg"):
+        f.unlink()
+    for w in WORK:
+        (ASSETS / "work" / f"{w['slug']}.svg").write_text(project_card(w, "PRIVATE  ·  PRODUCTION SYSTEM", True),
+                                                         encoding="utf-8", newline="\n")
     md = README.read_text(encoding="utf-8")
+    md = re.sub(r"<!-- work:start -->.*?<!-- work:end -->",
+                lambda m: "<!-- work:start -->\n" + work_block(stamp) + "\n<!-- work:end -->", md, flags=re.S)
     md = re.sub(r"<!-- projects:start -->.*?<!-- projects:end -->",
                 lambda m: "<!-- projects:start -->\n" + projects_block(ps, stamp) + "\n<!-- projects:end -->", md, flags=re.S)
     md = re.sub(r'(\./assets/[a-z0-9-]+\.svg)(\?v=\d+)?"', lambda m: f'{m.group(1)}?v={stamp}"', md)
