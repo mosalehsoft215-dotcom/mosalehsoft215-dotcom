@@ -1,78 +1,98 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="m.sale7: I build benchmarks where AI agents must earn every number. Raw instrument records in, certified results out, checked on sealed cases." />
+<img src="./assets/hero.svg" width="100%" alt="Mohamed Saleh, AI engineer: I build AI systems that hold up in production. Agents, document AI and computer vision, owned from raw data to deployment." />
 
 <br />
 
-<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/badge-bench.svg" height="30" alt="Reduction-Bench: 165 tasks" /></a>
-<a href="https://harborframework.com/docs"><img src="./assets/badge-harbor.svg" height="30" alt="Harbor task format" /></a>
-<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench#task-coverage"><img src="./assets/badge-domains.svg" height="30" alt="3 domains, 9 fields" /></a>
+<a href="https://www.linkedin.com/in/mohamed-saleh-013726274"><img src="./assets/badge-linkedin.svg" height="30" alt="LinkedIn: connect" /></a>
+<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/badge-bench.svg" height="30" alt="Reduction-Bench: open source" /></a>
+<a href="#recognition--education"><img src="./assets/badge-kaggle.svg" height="30" alt="Kaggle: 2x 1st place" /></a>
 <a href="https://github.com/mosalehsoft215-dotcom?tab=followers"><img src="./assets/badge-follow.svg" height="30" alt="Follow on GitHub" /></a>
 
 <br />
 <br />
 
-**AI Evaluation Engineer · Scientific & Engineering Benchmarks**
+**Mohamed Saleh · AI Engineer**
 
-<sub>Agentic tasks built from raw measurement records · physical, engineering and earth sciences · verified on sealed cases</sub>
+<sub>Agentic AI · Document Intelligence · Computer Vision · AI Evaluation · 3+ years shipping production AI</sub>
 
 </div>
 
-## I build tests that AI agents cannot bluff.
+## I build AI systems that hold up in production.
 
-**A model that can explain physics is not yet a model that can do the measurement.**
+**From the first messy dataset to the deployed service, and the evaluation that proves it works.**
 
-My work sits in the gap between the two. I take the records a laboratory, an observatory, a beamline or a plant really produces (counts, traces, spectra, logger files, run sheets, operator logs, calibration certificates) and turn them into tasks where an AI agent has to write the program a working scientist or engineer would trust with a signature. The program is then run, offline and sealed, on cases nobody has shown it, and only results inside their limits count.
+I am Mohamed Saleh, an AI engineer based in Egypt. Over the past three years I have shipped multi-agent assistants, document-intelligence pipelines and computer-vision applications that run in production for real users, and I have designed expert evaluation tasks and open benchmarks for frontier AI models.
 
-Every number in a task traces back to a physical model of the specimen, the sky or the plant and of each instrument in the chain, so the right answer is known exactly, never voted on.
+I own delivery end to end: data analysis and preprocessing, model research and training, agent design, APIs and MCP integrations, testing, deployment, and the improvement cycles that follow production feedback. The systems I build are judged by what they do on data nobody cleaned for them.
 
-## Featured: Reduction-Bench
+## Impact at a glance
 
-<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/featured-reduction-bench.svg" width="100%" alt="Reduction-Bench: agentic tasks, sealed cases, fields and expert hours" /></a>
+<img src="./assets/impact.svg" width="100%" alt="3+ years shipping AI, 4 systems in production, 1.7M+ records reconciled, about 95% passport OCR accuracy, open benchmark tasks, 2x Kaggle 1st place" />
 
-- **What it measures:** whether an agent can reduce raw measurement records to certified results that hold on unseen samples, stations, nights, units and sites.
-- **What ships with every task:** instruction, environment, reference solution, a hardened verifier with sealed cases, and the generator plus the author's checks.
-- **Where to start:** the [task catalogue](https://github.com/mosalehsoft215-dotcom/reduction-bench/blob/main/tasks/README.md) lists every task with a one-line brief; the [README](https://github.com/mosalehsoft215-dotcom/reduction-bench#running-the-benchmark) shows how to run any task with Harbor.
+## What I build
 
-## How every task is built
+<img src="./assets/capabilities.svg" width="100%" alt="Agentic AI systems, document intelligence, computer vision, AI evaluation" />
 
-<img src="./assets/build-loop.svg" width="100%" alt="Raw records, stated physics, silent conditions, a program, a sealed verdict" />
+## Selected work
 
-## Where the tasks come from
+<img src="./assets/work.svg" width="100%" alt="Passport and ID document AI, multi-agent operations assistant, travel booking assistant, hotel data platform, document AI for marketplaces, facial recognition" />
 
-<img src="./assets/field-map.svg" width="100%" alt="Task counts by field across physical, engineering and earth sciences" />
+<sub>Client and product names are left out on purpose; architecture and results can be walked through on request.</sub>
 
 <details>
-<summary><b>A few of the measurements behind the tasks</b></summary>
+<summary><b>How these systems were built</b></summary>
 <br />
 
-| Practice | Raw records the agent receives | What its program must certify |
-|---|---|---|
-| Metrology | free-fall fringe time tags, tides, laser beat, gradient survey | absolute gravity to a couple of microgal |
-| Atomic clocks | fountain-minus-maser blocks, Zeeman map over launch heights | maser offset, ageing, collisional and Zeeman shifts |
-| Astronomy | six-telescope squared visibilities and closure phases | giant's diameter, companion separation and position angle |
-| Power systems | earth-fault disturbance record, relay test via core-balance CT | network capacitive current and coil detuning |
-| Process plants | 8 h DCS historian, analyser calibration log, gas certificates | sulfur conversion and SO2 per tonne of acid |
-| Structures | stressing records, jack calibrations, 3-D tendon profiles | curvature and wobble friction of post-tensioned tendons |
+| System | Engineering highlights |
+|---|---|
+| Passport & ID document AI | Preprocessing chain (perspective correction, upscaling, enhancement, rotation handling), YOLO document detection trained in-house, a local MRZ model that lifted accuracy to about 95% while cutting LLM API usage; shipped as an API service, a test front end and a Windows build. |
+| Multi-agent operations assistant | Core agent infrastructure: orchestration, delegation between specialist agents, statement handling and a recommendation agent that guides users step by step. |
+| Travel booking assistant | Package and pricing logic, a dynamic package builder, booking guidance, a user-profile and preference-memory agent, VLM tools evaluated through MCP, and contributions to the orchestrator, price guard and analytics. |
+| Hotel data platform | ML/NLP entity alignment, duplicate detection and standardization over 1.7M+ hotel records; hotel endpoints and a GraphQL MCP layer feeding search, triage, booking and quotation agents. |
+| Document AI for marketplaces | Mixed-PDF extraction, OCR model benchmarking, real and synthetic PDF datasets, external enrichment tools and an extraction tool that grounds downstream agents. |
+| Facial recognition | Backend and frontend recognition pipeline in a production app, plus macOS and Windows tools for testing and database management. |
 
 </details>
 
+## Open-source highlight
+
+<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/featured-reduction-bench.svg" width="100%" alt="Reduction-Bench: open benchmark for AI agents on raw scientific and engineering records" /></a>
+
+## Experience
+
+<img src="./assets/timeline.svg" width="100%" alt="Reduction-Bench open source (2026), AI Developer at SafaSoft (2025 to now), AI Developer freelance (2023 to 2025), AI training and evaluation (2023 to 2024), B.Sc. Computer Science at Ain Shams University (2024), 1st place Kaggle computer vision (2021)" />
+
 ## Toolbox
 
-<img src="./assets/toolbox.svg" width="100%" alt="Python, Bash, SQL, NumPy, SciPy, pandas, Matplotlib, Harbor, pytest, CTRF reports, Docker, Git, GitHub Actions, Linux" />
+<img src="./assets/toolbox.svg" width="100%" alt="Python, SQL, JavaScript, C++, Java, C#, PyTorch, TensorFlow, scikit-learn, YOLO, OCR and MRZ, LLM and VLM, MCP, GraphQL, REST, Flask, n8n, tool calling, pandas, Selenium, MySQL, Docker, Git, Power BI" />
 
-## Operating principles
+## Recognition & education
 
-- **Evidence over assertion.** A task is finished when its reference solution, an independent second reduction and the sealed verifier agree, and every shortcut route has been measured and shown to fail.
-- **Hidden sizes, never hidden laws.** The notes state every law a reduction needs. What stays sealed is only the size of each condition in the cases the agent never sees.
-- **Programs, not answers.** Agents are scored on code that has to generalise, run as an unprivileged user with no network and a time limit.
-- **Exact truth.** Synthetic data from physical models of every instrument means the true value is known, so a result is right or wrong, not plausible.
-- **Real practice first.** Every task starts from a routine a working lab or plant performs, written in that field's own units, records and standards.
+- **1st place**, Neural Networks Competition, Kaggle (2024)
+- **1st place**, Computer Vision Competition, Kaggle (2021)
+- **B.Sc. Computer Science**, Faculty of Computer & Information Science, Ain Shams University (2024)
+- Certificates in Data Science and Computer Networks; training in Android (Java) and front-end development
+
+## How I work
+
+- **Production first.** A model is done when it runs reliably for real users, with endpoints, test tools and a deployment path, not when a notebook looks good.
+- **Measure before you ship.** Every system gets an evaluation set and a target; I build the benchmark when none exists.
+- **Own the whole path.** Data, models, agents, integrations and deployment are one problem, so I treat them as one.
+- **Cost-aware by design.** Local models and smart preprocessing where they beat paid APIs, as in the OCR pipeline that raised accuracy while cutting LLM spend.
+- **Leave it better documented.** Repositories, endpoints and agent workflows are written up so the next engineer can move fast.
 
 <br />
 
 <div align="center">
 
-<sub>The banner, cards and counts on this page are drawn by <a href="./scripts/refresh.py"><code>scripts/refresh.py</code></a> from the live repository and redrawn by GitHub Actions whenever the counts change.</sub>
+**Open to conversations about AI engineering roles and ambitious AI products.**
+
+<a href="https://www.linkedin.com/in/mohamed-saleh-013726274"><b>Connect on LinkedIn</b></a>
+
+<br />
+<br />
+
+<sub>The banner and cards on this page are drawn by <a href="./scripts/refresh.py"><code>scripts/refresh.py</code></a>; open-source counts are read from the live repository and redrawn by GitHub Actions whenever they change.</sub>
 
 </div>

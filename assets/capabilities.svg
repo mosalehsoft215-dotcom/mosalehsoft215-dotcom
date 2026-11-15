@@ -1,0 +1,51 @@
+<svg width="1200" height="250" viewBox="0 0 1200 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">What I build</title>
+  <desc id="desc">Agentic Ai Systems; Document Intelligence; Computer Vision; Ai Evaluation</desc>
+  <defs>
+    <linearGradient id="c-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111E"/><stop offset="1" stop-color="#150C2B"/>
+    </linearGradient>
+    <pattern id="c-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#1B2638" stroke-width="1" opacity=".55"/>
+    </pattern>
+  </defs>
+  <rect x=".5" y=".5" width="1199" height="249" rx="22" fill="url(#c-bg)" stroke="#23324A"/>
+  <rect x=".5" y=".5" width="1199" height="249" rx="22" fill="url(#c-grid)"/>
+
+  <rect x="36.0" y="36" width="267.0" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="36.0" y="36" width="267.0" height="4" rx="2" fill="#9B7CFF"/>
+  <circle cx="66.0" cy="76" r="9" fill="#9B7CFF" fill-opacity=".18" stroke="#9B7CFF"/>
+  <circle cx="66.0" cy="76" r="3" fill="#9B7CFF"/>
+  <text x="86.0" y="81" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="1.2" text-anchor="start">AGENTIC AI SYSTEMS</text>
+  <text x="58.0" y="120" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Multi-agent orchestration,</text>
+  <text x="58.0" y="142" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">delegation, memory, validation</text>
+  <text x="58.0" y="164" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">and tool use over MCP, GraphQL</text>
+  <text x="58.0" y="186" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">and REST.</text>
+  <rect x="323.0" y="36" width="267.0" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="323.0" y="36" width="267.0" height="4" rx="2" fill="#4D7CFE"/>
+  <circle cx="353.0" cy="76" r="9" fill="#4D7CFE" fill-opacity=".18" stroke="#4D7CFE"/>
+  <circle cx="353.0" cy="76" r="3" fill="#4D7CFE"/>
+  <text x="373.0" y="81" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="1.2" text-anchor="start">DOCUMENT INTELLIGENCE</text>
+  <text x="345.0" y="120" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">OCR and MRZ pipelines,</text>
+  <text x="345.0" y="142" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">mixed-PDF extraction,</text>
+  <text x="345.0" y="164" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">enrichment and grounding for</text>
+  <text x="345.0" y="186" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">downstream agents.</text>
+  <rect x="610.0" y="36" width="267.0" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="610.0" y="36" width="267.0" height="4" rx="2" fill="#F0883E"/>
+  <circle cx="640.0" cy="76" r="9" fill="#F0883E" fill-opacity=".18" stroke="#F0883E"/>
+  <circle cx="640.0" cy="76" r="3" fill="#F0883E"/>
+  <text x="660.0" y="81" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="1.2" text-anchor="start">COMPUTER VISION</text>
+  <text x="632.0" y="120" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">YOLO detection, facial</text>
+  <text x="632.0" y="142" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">recognition, perspective</text>
+  <text x="632.0" y="164" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">correction and image</text>
+  <text x="632.0" y="186" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">enhancement.</text>
+  <rect x="897.0" y="36" width="267.0" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="897.0" y="36" width="267.0" height="4" rx="2" fill="#2DD4BF"/>
+  <circle cx="927.0" cy="76" r="9" fill="#2DD4BF" fill-opacity=".18" stroke="#2DD4BF"/>
+  <circle cx="927.0" cy="76" r="3" fill="#2DD4BF"/>
+  <text x="947.0" y="81" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#F8FAFC" letter-spacing="1.2" text-anchor="start">AI EVALUATION</text>
+  <text x="919.0" y="120" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Benchmarks, expert tasks,</text>
+  <text x="919.0" y="142" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">LLM and VLM evaluation and</text>
+  <text x="919.0" y="164" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">data quality for model</text>
+  <text x="919.0" y="186" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">training.</text>
+</svg>

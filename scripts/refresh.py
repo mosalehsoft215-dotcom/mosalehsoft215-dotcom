@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Rebuild the profile's SVG assets from live GitHub counts.
+"""Rebuild the profile's SVG assets.
 
-Reads the public Reduction-Bench tree and README plus the public profile, writes data/stats.json and every
-asset under assets/. Standard library only, so it runs unchanged on a GitHub Actions runner. When the counts
-are the same as the stored ones, nothing is rewritten (no empty daily commits).
+Career facts (roles, shipped systems, recognition) live in PROFILE below; the open-source counts are read live
+from the public Reduction-Bench repository. Standard library only, so it runs unchanged on a GitHub Actions
+runner. When the live counts match data/stats.json, nothing is rewritten (no empty daily commits); pass --force
+to redraw anyway after editing PROFILE.
 """
 import datetime
 import html
@@ -27,9 +28,50 @@ BLUE, TEAL, VIOLET, ORANGE, AMBER = "#4D7CFE", "#2DD4BF", "#9B7CFF", "#F0883E", 
 DOMAIN_COLOR = {"physical-sciences": BLUE, "engineering-sciences": ORANGE, "earth-sciences": TEAL}
 DOMAIN_NAME = {"physical-sciences": "Physical Sciences", "engineering-sciences": "Engineering Sciences",
                "earth-sciences": "Earth Sciences"}
-FIELD_NAME = {"physics": "Physics", "chemistry": "Chemistry", "materials-science": "Materials Science",
-              "astronomy": "Astronomy", "mechanical-engineering": "Mechanical", "electrical-engineering": "Electrical",
-              "chemical-engineering": "Chemical", "civil-engineering": "Civil", "geosciences": "Geosciences"}
+
+PROFILE = {
+    "name": "MOHAMED SALEH",
+    "role": "AI ENGINEER",
+    "years": "3+",
+    "in_production": 4,
+    "records": "1.7M+",
+    "ocr": "~95%",
+    "kaggle": "2×",
+    "capabilities": [
+        ("AGENTIC AI SYSTEMS", VIOLET, ["Multi-agent orchestration,", "delegation, memory, validation", "and tool use over MCP, GraphQL", "and REST."]),
+        ("DOCUMENT INTELLIGENCE", BLUE, ["OCR and MRZ pipelines,", "mixed-PDF extraction,", "enrichment and grounding for", "downstream agents."]),
+        ("COMPUTER VISION", ORANGE, ["YOLO detection, facial", "recognition, perspective", "correction and image", "enhancement."]),
+        ("AI EVALUATION", TEAL, ["Benchmarks, expert tasks,", "LLM and VLM evaluation and", "data quality for model", "training."]),
+    ],
+    "work": [
+        ("Passport & ID document AI", "IN PRODUCTION", TEAL,
+         ["YOLO detection, perspective correction,", "enhancement and a local MRZ model:", "~95% accuracy at lower LLM API cost."]),
+        ("Multi-agent operations assistant", "IN PRODUCTION", TEAL,
+         ["Orchestrator, delegation and a", "recommendation agent that guides users", "through complex operation statements."]),
+        ("Travel booking assistant", "IN PRODUCTION", TEAL,
+         ["Dynamic package and pricing logic, a", "preference-memory agent, price guard and", "VLM tools served over MCP."]),
+        ("Hotel data platform", "1.7M+ RECORDS", BLUE,
+         ["Entity resolution, deduplication and", "standardization of 1.7M+ records, with a", "GraphQL MCP layer and search agents."]),
+        ("Document AI for marketplaces", "DEPLOYED PILOT", AMBER,
+         ["Mixed-PDF extraction, OCR model trials,", "real and synthetic datasets and external", "enrichment tools for agent grounding."]),
+        ("Facial recognition", "IN PRODUCTION", TEAL,
+         ["Recognition pipeline across backend and", "frontend, shipped with desktop apps for", "testing and database management."]),
+    ],
+    "timeline": [
+        ("2026", "Reduction-Bench · open source", "{bench} expert tasks that test AI agents on raw scientific and engineering data.", TEAL),
+        ("2025 – NOW", "AI Developer · SafaSoft", "Production agents, document AI, computer vision and MCP integrations, owned end to end.", ORANGE),
+        ("2023 – 2025", "AI Developer · Freelance", "Chatbots, NLP pipelines, model integrations and reusable data-processing tools.", BLUE),
+        ("2023 – 2024", "AI training & evaluation", "Coding expert, then senior reviewer and task creator for model-quality programs.", VIOLET),
+        ("2024", "B.Sc. Computer Science · Ain Shams University", "1st place, Kaggle neural-networks competition (2024).", AMBER),
+        ("2021", "1st place · Kaggle computer-vision competition", "Early start in deep learning for images.", AMBER),
+    ],
+    "tools": [
+        ("LANGUAGES", BLUE, ["Python", "SQL", "JavaScript", "C++", "Java", "C#"]),
+        ("AI / ML", VIOLET, ["PyTorch", "TensorFlow", "scikit-learn", "YOLO", "OCR & MRZ", "LLM / VLM"]),
+        ("AGENTS & APIS", ORANGE, ["MCP", "GraphQL", "REST", "Flask", "n8n", "Tool calling"]),
+        ("DATA & DELIVERY", TEAL, ["pandas", "Selenium", "MySQL", "Docker", "Git", "Power BI"]),
+    ],
+}
 
 
 # ------------------------------------------------------------------ data
@@ -47,11 +89,10 @@ def live_counts():
     tree = fetch(f"https://api.github.com/repos/{USER}/{BENCH}/git/trees/main?recursive=1")
     if tree.get("truncated"):
         raise RuntimeError("tree truncated")
-    fields, files, cases = {}, 0, 0
+    fields, cases = {}, 0
     for e in tree["tree"]:
         p = e["path"]
         if e["type"] == "blob":
-            files += 1
             m = re.fullmatch(r"tasks/([^/]+)/([^/]+)/[^/]+/task\.toml", p)
             if m:
                 key = f"{m.group(1)}/{m.group(2)}"
@@ -61,10 +102,9 @@ def live_counts():
     readme = fetch(f"https://raw.githubusercontent.com/{USER}/{BENCH}/main/README.md", raw=True)
     hours = re.search(r"about \*\*([\d,]+)\*\* hours", readme)
     repo = fetch(f"https://api.github.com/repos/{USER}/{BENCH}")
-    prof = fetch(f"https://api.github.com/users/{USER}")
     return {"tasks": sum(fields.values()), "fields": fields, "domains": len({k.split('/')[0] for k in fields}),
-            "cases": cases, "files": files, "hours": int(hours.group(1).replace(",", "")) if hours else None,
-            "stars": repo.get("stargazers_count", 0), "public_repos": prof.get("public_repos", 0)}
+            "cases": cases, "hours": int(hours.group(1).replace(",", "")) if hours else None,
+            "stars": repo.get("stargazers_count", 0)}
 
 
 # ------------------------------------------------------------------ helpers
@@ -94,6 +134,12 @@ def panel(w, h, rid):
 def text(x, y, s, size, fill=INK, family=MONO, weight=400, spacing=0, anchor="start", extra=""):
     return (f'<text x="{x}" y="{y}" font-family="{family}" font-size="{size}" font-weight="{weight}" fill="{fill}" '
             f'letter-spacing="{spacing}" text-anchor="{anchor}"{extra}>{esc(s)}</text>')
+
+
+def pill(x, y, label, col, size=10, h=24):
+    w = len(label) * (size * 0.62 + 1.1) + 22
+    return (f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{h}" rx="{h / 2}" fill="{col}" fill-opacity=".12" stroke="{col}" '
+            f'stroke-opacity=".7"/>' + text(f"{x + 11:.1f}", y + h / 2 + size * 0.36, label, size, col, MONO, 700, 1.1)), w
 
 
 MOTION = """  <style>
@@ -129,6 +175,7 @@ MOTION = """  <style>
 
 # ------------------------------------------------------------------ hero
 def hero(s, day):
+    P = PROFILE
     W, H = 1200, 420
     b = [panel(W, H, "h")]
     b.append('  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#2DD4BF" stop-opacity=".20"/>'
@@ -137,20 +184,19 @@ def hero(s, day):
              '<stop offset="1" stop-color="#FBBF24"/></linearGradient>')
     b.append(f'  <rect class="trace" x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="22" stroke="{TEAL}" stroke-width="1.6" opacity=".7"/>')
     b.append('  <path d="M560 1 H640" stroke="#2DD4BF" stroke-width="2" opacity=".8"/>')
-    # left column
-    b.append("  " + text(64, 88, "M.SALE7  /  AI EVALUATION & SCIENTIFIC BENCHMARKS", 12, TEAL, MONO, 700, 3, extra=' class="rise r1"'))
-    b.append("  " + text(64, 158, "I build benchmarks", 50, INK, SANS, 800, -0.5, extra=' class="rise r2"'))
-    b.append("  " + text(64, 216, "where AI agents must", 50, INK, SANS, 800, -0.5, extra=' class="rise r3"'))
-    b.append("  " + text(64, 274, "earn every number.", 50, "url(#accent)", SANS, 800, -0.5, extra=' class="rise r4"'))
-    b.append("  " + text(64, 318, "Raw instrument records in. Certified results out. Checked on sealed cases.", 17, MUTED, SANS, 400, 0,
+    b.append("  " + text(64, 88, f"{P['name']}  /  {P['role']}  ·  AGENTS · DOCUMENT AI · VISION", 12, TEAL, MONO, 700, 2.6,
+                         extra=' class="rise r1"'))
+    b.append("  " + text(64, 158, "I build AI systems", 50, INK, SANS, 800, -0.5, extra=' class="rise r2"'))
+    b.append("  " + text(64, 216, "that hold up in", 50, INK, SANS, 800, -0.5, extra=' class="rise r3"'))
+    b.append("  " + text(64, 274, "production.", 50, "url(#accent)", SANS, 800, -0.5, extra=' class="rise r4"'))
+    b.append("  " + text(64, 318, "Agents, document AI and computer vision, owned from raw data to deployment.", 17, MUTED, SANS,
                          extra=' class="rise r5"'))
     b.append(f'  <path d="M64 344 H700" stroke="{RULE}" stroke-width="1"/>')
     b.append(f'  <circle class="pulse" cx="70" cy="368" r="4.5" fill="{TEAL}"/>')
-    rail = (f"LIVE COUNT  ·  {num(s['tasks'])} BENCHMARK TASKS  /  {s['fields_n']} FIELDS  /  {s['domains']} DOMAINS  ·  "
-            f"{num(s['cases'])} SEALED CASES  ·  {num(s['hours'])} EXPERT HOURS")
+    rail = (f"{P['years']} YEARS SHIPPING AI  ·  {P['in_production']} SYSTEMS IN PRODUCTION  ·  {P['records']} RECORDS "
+            f"RECONCILED  ·  {num(s['tasks'])} OPEN BENCHMARK TASKS  ·  {P['kaggle']} KAGGLE 1ST PLACE")
     b.append("  " + text(84, 372, rail, 11, "#CBD5E1", MONO, 600, 1))
-    b.append("  " + text(84, 394, f"MACHINE-COUNTED FROM GITHUB  ·  {num(s['files'])} FILES SHIPPED  ·  {day} UTC", 10, DIM, MONO, 400, 1))
-    # right visual
+    b.append("  " + text(84, 394, f"BENCHMARK COUNT READ LIVE FROM GITHUB  ·  {day} UTC", 10, DIM, MONO, 400, 1))
     cx, cy = 930, 200
     b.append(f'  <circle cx="{cx}" cy="{cy}" r="190" fill="url(#glow)"/>')
     b.append(f'  <circle cx="{cx}" cy="{cy}" r="150" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="2 7"/>')
@@ -160,13 +206,12 @@ def hero(s, day):
     b.append(f'  <circle class="wave d" cx="{cx}" cy="{cy}" r="66" stroke="{TEAL}" stroke-width="1.5"/>')
     b.append(f'  <circle cx="{cx}" cy="{cy}" r="62" fill="#0A1C26" stroke="{TEAL}" stroke-width="2"/>')
     b.append(f'  <circle cx="{cx}" cy="{cy}" r="46" stroke="{TEAL}" stroke-width="1" opacity=".45"/>')
-    # raw trace entering the core and a clean line leaving it
     b.append(f'  <path class="scan" d="M{cx - 42} {cy - 22} l7 -8 l6 16 l6 -20 l6 22 l6 -16 l6 8" stroke="{BLUE}" stroke-width="2" '
              'stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="520" opacity=".0"/>')
     b.append(f'  <path class="check" d="M{cx - 20} {cy + 4} l14 14 l28 -30" stroke="{INK}" stroke-width="5" stroke-linecap="round" '
              'stroke-linejoin="round"/>')
-    chips = [("RAW RECORDS", BLUE, cx - 230, cy - 118, "c1"), ("REDUCED", VIOLET, cx + 120, cy - 118, "c2"),
-             ("SEALED", TEAL, cx - 210, cy + 112, "c3"), ("CERTIFIED", ORANGE, cx + 110, cy + 112, "c4")]
+    chips = [("PERCEIVE", BLUE, cx - 215, cy - 118, "c1"), ("REASON", VIOLET, cx + 125, cy - 118, "c2"),
+             ("VERIFY", TEAL, cx - 205, cy + 112, "c4"), ("ACT", ORANGE, cx + 135, cy + 112, "c3")]
     for lab, col, x, y, c in chips:
         w = int(len(lab) * 8.2 + 34)
         mx, my = x + w / 2, y + 14
@@ -175,107 +220,90 @@ def hero(s, day):
         b.append(f'  <g class="chip {c}"><rect x="{x}" y="{y}" width="{w}" height="28" rx="14" fill="#0B1220" stroke="{col}" '
                  f'stroke-width="1.2"/><circle cx="{x + 15}" cy="{y + 14}" r="3.5" fill="{col}"/>'
                  + text(x + 26, y + 18, lab, 10.5, col, MONO, 700, 1.6) + "</g>")
-    desc = (f"{num(s['tasks'])} benchmark tasks in {s['fields_n']} fields and {s['domains']} domains, "
-            f"{num(s['cases'])} sealed cases, {num(s['hours'])} expert hours, counted {day}.")
-    return svg(W, H, "m.sale7: AI evaluation and scientific benchmarks", desc, "\n".join(b), MOTION)
+    desc = (f"Mohamed Saleh, AI engineer: {P['years']} years shipping production AI, {P['in_production']} systems in production, "
+            f"{P['records']} records reconciled, {s['tasks']} open benchmark tasks.")
+    return svg(W, H, "Mohamed Saleh: I build AI systems that hold up in production", desc, "\n".join(b), MOTION)
 
 
-# ------------------------------------------------------------------ featured card
-def featured(s):
-    W, H = 1200, 330
-    b = [panel(W, H, "f")]
-    b.append("  " + text(56, 70, "FEATURED BENCHMARK", 12, ORANGE, MONO, 700, 3))
-    b.append("  " + text(56, 122, "Reduction-Bench", 44, INK, SANS, 800, -0.5))
-    for i, ln in enumerate(["Agentic tasks where an AI writes the program that turns raw",
-                            "instrument records into certified figures, then has it run",
-                            "on sealed cases it has never seen."]):
-        b.append("  " + text(56, 160 + i * 26, ln, 17, MUTED, SANS))
-    pills = ["HARBOR TASK FORMAT", "APACHE-2.0", f"★ {s['stars']} STARS", "PUBLIC"]
-    x = 56
-    for p in pills:
-        w = int(len(p) * 7.6 + 26)
-        b.append(f'  <rect x="{x}" y="252" width="{w}" height="28" rx="14" fill="#0B1220" stroke="#2A3A55"/>')
-        b.append("  " + text(x + 13, 270, p, 10.5, "#CBD5E1", MONO, 700, 1.2))
-        x += w + 10
-    tiles = [(num(s["tasks"]), "TASKS", ORANGE), (num(s["cases"]), "SEALED CASES", TEAL),
-             (str(s["fields_n"]), "FIELDS", BLUE), (num(s["hours"]), "EXPERT HOURS", VIOLET)]
+# ------------------------------------------------------------------ impact tiles
+def impact(s):
+    P = PROFILE
+    tiles = [(P["years"], "YEARS SHIPPING AI", ORANGE), (str(P["in_production"]), "SYSTEMS IN PRODUCTION", TEAL),
+             (P["records"], "RECORDS RECONCILED", BLUE), (P["ocr"], "PASSPORT OCR ACCURACY", VIOLET),
+             (num(s["tasks"]), "OPEN BENCHMARK TASKS", TEAL), (P["kaggle"], "KAGGLE 1ST PLACE", AMBER)]
+    W, H, gap = 1200, 140, 14
+    tw = (W - gap * (len(tiles) - 1)) / len(tiles)
+    b = []
     for i, (n, lab, col) in enumerate(tiles):
-        tx, ty = 690 + (i % 2) * 238, 46 + (i // 2) * 112
-        b.append(f'  <rect x="{tx}" y="{ty}" width="222" height="98" rx="16" fill="#0B1220" stroke="#22314A"/>')
-        b.append(f'  <rect x="{tx}" y="{ty}" width="222" height="4" rx="2" fill="{col}"/>')
-        b.append("  " + text(tx + 22, ty + 58, n, 36, INK, MONO, 700))
-        b.append("  " + text(tx + 22, ty + 82, lab, 10.5, MUTED, MONO, 600, 1.8))
-    # domain split bar
-    total = s["tasks"]; x = 690.0; bw = 460
-    doms = {}
-    for k, v in s["fields"].items():
-        doms[k.split("/")[0]] = doms.get(k.split("/")[0], 0) + v
-    for d in ("physical-sciences", "engineering-sciences", "earth-sciences"):
-        if d not in doms:
-            continue
-        w = bw * doms[d] / total
-        b.append(f'  <rect x="{x:.1f}" y="284" width="{max(w - 3, 3):.1f}" height="8" rx="4" fill="{DOMAIN_COLOR[d]}"/>')
-        x += w
-    legend = "  ·  ".join(f"{DOMAIN_NAME[d].upper()} {doms[d]}" for d in ("physical-sciences", "engineering-sciences", "earth-sciences") if d in doms)
-    b.append("  " + text(690, 312, legend, 10, DIM, MONO, 600, 1))
-    return svg(W, H, "Reduction-Bench", f"{s['tasks']} tasks, {s['cases']} sealed cases, {s['fields_n']} fields.", "\n".join(b))
+        x = i * (tw + gap)
+        b.append(f'  <rect x="{x + .5:.1f}" y=".5" width="{tw - 1:.1f}" height="{H - 1}" rx="16" fill="#0B1220" stroke="#22314A"/>')
+        b.append(f'  <rect x="{x + .5:.1f}" y=".5" width="{tw - 1:.1f}" height="5" rx="2.5" fill="{col}"/>')
+        b.append("  " + text(f"{x + tw / 2:.1f}", 76, n, 40, INK, MONO, 700, 0, "middle"))
+        b.append("  " + text(f"{x + tw / 2:.1f}", 108, lab, 10, MUTED, MONO, 600, 1, "middle"))
+    return svg(W, H, "Impact at a glance", ", ".join(f"{n} {l.lower()}" for n, l, _ in tiles), "\n".join(b))
 
 
-# ------------------------------------------------------------------ build loop
-def build_loop():
+# ------------------------------------------------------------------ capabilities
+def capabilities():
+    caps = PROFILE["capabilities"]
     W, H = 1200, 250
-    steps = [("01", "RAW RECORDS", BLUE, ["Counts, traces, logs and", "sheets, kept the way the", "lab or plant keeps them."]),
-             ("02", "STATED PHYSICS", VIOLET, ["Every law a reduction", "needs is written in the", "notes. Nothing is a trick."]),
-             ("03", "SILENT CONDITIONS", TEAL, ["What no sheet records:", "a drifted zero, a clock,", "a geometry. Only data shows."]),
-             ("04", "A PROGRAM", ORANGE, ["Agents ship code, never", "typed numbers. It must", "hold on unseen cases."]),
-             ("05", "SEALED VERDICT", AMBER, ["Run offline on held-back", "cases. Reward 1 only if", "every result is in limit."])]
-    b = [panel(W, H, "b")]
-    cw, gap, x0 = 206, 24, 36
-    for i, (n, t, col, lines) in enumerate(steps):
-        x = x0 + i * (cw + gap)
-        b.append(f'  <rect x="{x}" y="36" width="{cw}" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>')
-        b.append(f'  <rect x="{x}" y="36" width="5" height="178" rx="2.5" fill="{col}"/>')
-        b.append("  " + text(x + 22, 70, n, 13, col, MONO, 700, 1))
-        b.append("  " + text(x + 22, 100, t, 14.5, INK, MONO, 700, 0.6))
+    b = [panel(W, H, "c")]
+    cw = (W - 72 - 20 * (len(caps) - 1)) / len(caps)
+    for i, (t, col, lines) in enumerate(caps):
+        x = 36 + i * (cw + 20)
+        b.append(f'  <rect x="{x:.1f}" y="36" width="{cw:.1f}" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>')
+        b.append(f'  <rect x="{x:.1f}" y="36" width="{cw:.1f}" height="4" rx="2" fill="{col}"/>')
+        b.append(f'  <circle cx="{x + 30:.1f}" cy="76" r="9" fill="{col}" fill-opacity=".18" stroke="{col}"/>')
+        b.append(f'  <circle cx="{x + 30:.1f}" cy="76" r="3" fill="{col}"/>')
+        b.append("  " + text(f"{x + 50:.1f}", 81, t, 13, INK, MONO, 700, 1.2))
         for k, ln in enumerate(lines):
-            b.append("  " + text(x + 22, 136 + k * 22, ln, 12.5, MUTED, SANS))
-        if i < len(steps) - 1:
-            ax = x + cw + 4
-            b.append(f'  <path d="M{ax} 125 h14" stroke="#3B4B66" stroke-width="2"/><path d="M{ax + 14} 120 l6 5 l-6 5z" fill="#3B4B66"/>')
-    return svg(W, H, "How every task is built", "Raw records, stated physics, silent conditions, a program, a sealed verdict.", "\n".join(b))
+            b.append("  " + text(f"{x + 22:.1f}", 120 + k * 22, ln, 14, MUTED, SANS))
+    return svg(W, H, "What I build", "; ".join(t.title() for t, _, _ in caps), "\n".join(b))
 
 
-# ------------------------------------------------------------------ field map
-def field_map(s):
-    cols = [d for d in ("physical-sciences", "engineering-sciences", "earth-sciences") if any(k.startswith(d + "/") for k in s["fields"])]
-    rows = max(sum(1 for k in s["fields"] if k.startswith(d + "/")) for d in cols)
-    W, H = 1200, 110 + rows * 46
-    b = [panel(W, H, "m")]
-    mx = max(s["fields"].values())
-    cw = (W - 72 - 24 * (len(cols) - 1)) / len(cols)
-    for i, d in enumerate(cols):
-        x = 36 + i * (cw + 24); col = DOMAIN_COLOR[d]
-        items = sorted(((k.split("/")[1], v) for k, v in s["fields"].items() if k.startswith(d + "/")), key=lambda kv: (-kv[1], kv[0]))
-        b.append(f'  <circle cx="{x + 7:.1f}" cy="52" r="6" fill="{col}"/>')
-        b.append("  " + text(f"{x + 22:.1f}", 57, DOMAIN_NAME[d].upper(), 13, col, MONO, 700, 1.6))
-        b.append("  " + text(f"{x + cw:.1f}", 57, str(sum(v for _, v in items)), 13, col, MONO, 700, 0, "end"))
-        for j, (f, v) in enumerate(items):
-            y = 92 + j * 46
-            b.append("  " + text(f"{x:.1f}", y, FIELD_NAME.get(f, f), 14, INK, SANS, 600))
-            b.append("  " + text(f"{x + cw:.1f}", y, str(v), 14, INK, MONO, 700, 0, "end"))
-            b.append(f'  <rect x="{x:.1f}" y="{y + 10}" width="{cw:.1f}" height="7" rx="3.5" fill="#1A2436"/>')
-            b.append(f'  <rect x="{x:.1f}" y="{y + 10}" width="{max(cw * v / mx, 6):.1f}" height="7" rx="3.5" fill="{col}"/>')
-    return svg(W, H, "Fields covered", f"{s['tasks']} tasks across {s['fields_n']} fields.", "\n".join(b))
+# ------------------------------------------------------------------ selected work
+def work():
+    items = PROFILE["work"]
+    cols, cw_gap, rh = 3, 20, 168
+    rows = (len(items) + cols - 1) // cols
+    W, H = 1200, 36 * 2 + rows * rh + (rows - 1) * 20
+    b = [panel(W, H, "w")]
+    cw = (W - 72 - cw_gap * (cols - 1)) / cols
+    for i, (t, status, col, lines) in enumerate(items):
+        x = 36 + (i % cols) * (cw + cw_gap); y = 36 + (i // cols) * (rh + 20)
+        b.append(f'  <rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="{rh}" rx="16" fill="#0B1220" stroke="#22314A"/>')
+        b.append(f'  <rect x="{x:.1f}" y="{y}" width="5" height="{rh}" rx="2.5" fill="{col}"/>')
+        p, _ = pill(x + 22, y + 20, status, col)
+        b.append("  " + p)
+        b.append("  " + text(f"{x + 22:.1f}", y + 74, t, 18, INK, SANS, 700))
+        for k, ln in enumerate(lines):
+            b.append("  " + text(f"{x + 22:.1f}", y + 104 + k * 21, ln, 13.5, MUTED, SANS))
+    return svg(W, H, "Selected work", "; ".join(f"{t} ({s.lower()})" for t, s, _, _ in items), "\n".join(b))
+
+
+# ------------------------------------------------------------------ timeline
+def timeline(s):
+    rows = PROFILE["timeline"]
+    W, rh = 1200, 62
+    H = 56 + len(rows) * rh
+    b = [panel(W, H, "t")]
+    lx = 268
+    b.append(f'  <path d="M{lx} 46 V{H - 34}" stroke="#2A3A55" stroke-width="2"/>')
+    for i, (when, title, sub, col) in enumerate(rows):
+        y = 52 + i * rh
+        b.append("  " + text(236, y + 16, when, 12.5, col, MONO, 700, 1.2, "end"))
+        b.append(f'  <circle cx="{lx}" cy="{y + 11}" r="7" fill="#0B1220" stroke="{col}" stroke-width="2.5"/>')
+        b.append(f'  <circle cx="{lx}" cy="{y + 11}" r="2.5" fill="{col}"/>')
+        b.append("  " + text(298, y + 17, title, 17, INK, SANS, 700))
+        b.append("  " + text(298, y + 40, sub.format(bench=num(s["tasks"])), 13.5, MUTED, SANS))
+    return svg(W, H, "Experience", "; ".join(f"{w}: {t}" for w, t, _, _ in rows), "\n".join(b))
 
 
 # ------------------------------------------------------------------ toolbox
 def toolbox():
-    groups = [("LANGUAGES", BLUE, ["Python", "Bash", "SQL"]),
-              ("SCIENTIFIC STACK", TEAL, ["NumPy", "SciPy", "pandas", "Matplotlib"]),
-              ("EVALUATION", ORANGE, ["Harbor", "pytest", "CTRF reports", "Docker"]),
-              ("WORKFLOW", VIOLET, ["Git", "GitHub Actions", "Linux"])]
-    W, H = 1200, 196
-    b = [panel(W, H, "t")]
+    groups = PROFILE["tools"]
+    W, H = 1200, 232
+    b = [panel(W, H, "x")]
     cw = (W - 72 - 3 * 20) / 4
     for i, (g, col, items) in enumerate(groups):
         x = 36 + i * (cw + 20)
@@ -288,7 +316,42 @@ def toolbox():
             b.append(f'  <rect x="{px:.1f}" y="{py}" width="{w:.1f}" height="32" rx="16" fill="#0B1220" stroke="{col}" stroke-opacity=".55"/>')
             b.append("  " + text(f"{px + 15:.1f}", py + 21, it, 13, INK, SANS, 600))
             px += w + 10
-    return svg(W, H, "Toolbox", "Languages, scientific stack, evaluation and workflow tools.", "\n".join(b))
+    return svg(W, H, "Toolbox", "; ".join(f"{g.title()}: {', '.join(i)}" for g, _, i in groups), "\n".join(b))
+
+
+# ------------------------------------------------------------------ open-source card
+def featured(s):
+    W, H = 1200, 300
+    b = [panel(W, H, "f")]
+    b.append("  " + text(56, 66, "OPEN-SOURCE HIGHLIGHT", 12, ORANGE, MONO, 700, 3))
+    b.append("  " + text(56, 116, "Reduction-Bench", 42, INK, SANS, 800, -0.5))
+    for i, ln in enumerate(["A public benchmark for AI agents: each task hands the agent",
+                            "raw scientific or engineering records and scores the program",
+                            "it writes on sealed cases it has never seen."]):
+        b.append("  " + text(56, 154 + i * 25, ln, 16.5, MUTED, SANS))
+    x = 56
+    for lab in ["HARBOR TASK FORMAT", "APACHE-2.0", f"★ {s['stars']} STARS"]:
+        p, w = pill(x, 236, lab, "#CBD5E1", 10, 28)
+        b.append("  " + p); x += w + 10
+    tiles = [(num(s["tasks"]), "TASKS", ORANGE), (num(s["cases"]), "SEALED CASES", TEAL),
+             (str(len(s["fields"])), "FIELDS", BLUE), (num(s["hours"]), "EXPERT HOURS", VIOLET)]
+    for i, (n, lab, col) in enumerate(tiles):
+        tx, ty = 690 + (i % 2) * 238, 40 + (i // 2) * 104
+        b.append(f'  <rect x="{tx}" y="{ty}" width="222" height="90" rx="16" fill="#0B1220" stroke="#22314A"/>')
+        b.append(f'  <rect x="{tx}" y="{ty}" width="222" height="4" rx="2" fill="{col}"/>')
+        b.append("  " + text(tx + 22, ty + 54, n, 34, INK, MONO, 700))
+        b.append("  " + text(tx + 22, ty + 76, lab, 10.5, MUTED, MONO, 600, 1.8))
+    total = s["tasks"]; x = 690.0
+    doms = {}
+    for k, v in s["fields"].items():
+        doms[k.split("/")[0]] = doms.get(k.split("/")[0], 0) + v
+    order = [d for d in ("physical-sciences", "engineering-sciences", "earth-sciences") if d in doms]
+    for d in order:
+        w = 460 * doms[d] / total
+        b.append(f'  <rect x="{x:.1f}" y="256" width="{max(w - 3, 3):.1f}" height="8" rx="4" fill="{DOMAIN_COLOR[d]}"/>')
+        x += w
+    b.append("  " + text(690, 284, "  ·  ".join(f"{DOMAIN_NAME[d].upper()} {doms[d]}" for d in order), 10, DIM, MONO, 600, 1))
+    return svg(W, H, "Reduction-Bench", f"{s['tasks']} tasks, {s['cases']} sealed cases.", "\n".join(b))
 
 
 # ------------------------------------------------------------------ badges
@@ -315,26 +378,26 @@ def main():
             sys.exit(1)
         return
     if s["hours"] is None and old:
-        s["hours"] = old["hours"]
-    s["fields_n"] = len(s["fields"])
-    counts = {k: v for k, v in s.items() if k != "day"}
-    force = "--force" in sys.argv
-    if old and not force and {k: v for k, v in old.items() if k != "day"} == counts:
+        s["hours"] = old.get("hours")
+    keys = ("tasks", "fields", "domains", "cases", "hours", "stars")
+    if old and "--force" not in sys.argv and all(old.get(k) == s[k] for k in keys):
         print("counts unchanged; nothing rewritten")
         return
     day = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
     s["day"] = day
     ASSETS.mkdir(exist_ok=True); DATA.parent.mkdir(exist_ok=True)
-    out = {"hero.svg": hero(s, day), "featured-reduction-bench.svg": featured(s), "build-loop.svg": build_loop(),
-           "field-map.svg": field_map(s), "toolbox.svg": toolbox(),
-           "badge-bench.svg": badge("REDUCTION-BENCH", f"{s['tasks']} TASKS", "#D9622B"),
-           "badge-harbor.svg": badge("HARBOR", "TASK FORMAT", "#2F6FDB"),
-           "badge-domains.svg": badge("COVERAGE", f"{s['domains']} DOMAINS · {s['fields_n']} FIELDS", "#0F9F8F"),
+    for stale in ("build-loop.svg", "field-map.svg", "badge-harbor.svg", "badge-domains.svg"):
+        (ASSETS / stale).unlink(missing_ok=True)
+    out = {"hero.svg": hero(s, day), "impact.svg": impact(s), "capabilities.svg": capabilities(), "work.svg": work(),
+           "timeline.svg": timeline(s), "toolbox.svg": toolbox(), "featured-reduction-bench.svg": featured(s),
+           "badge-linkedin.svg": badge("LINKEDIN", "CONNECT", "#0A66C2"),
+           "badge-bench.svg": badge("REDUCTION-BENCH", "OPEN SOURCE", "#D9622B"),
+           "badge-kaggle.svg": badge("KAGGLE", "2× 1ST PLACE", "#1F8FC9"),
            "badge-follow.svg": badge("GITHUB", "FOLLOW", "#7C3AED")}
     for name, content in out.items():
         (ASSETS / name).write_text(content, encoding="utf-8", newline="\n")
-    DATA.write_text(json.dumps(s, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
-    print("wrote", len(out), "assets;", {k: s[k] for k in ("tasks", "cases", "hours", "files", "stars", "day")})
+    DATA.write_text(json.dumps({k: s[k] for k in keys + ("day",)}, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
+    print("wrote", len(out), "assets;", {k: s[k] for k in ("tasks", "cases", "hours", "stars", "day")})
 
 
 if __name__ == "__main__":
