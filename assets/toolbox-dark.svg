@@ -13,55 +13,55 @@
   <rect x=".5" y=".5" width="1199" height="231" rx="22" fill="url(#x-grid)"/>
 
   <text x="36.0" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" fill="#4D7CFE" letter-spacing="2" text-anchor="start">LANGUAGES</text>
-  <rect x="36.0" y="76" width="80.4" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".55"/>
+  <rect x="36.0" y="76" width="80.4" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".6"/>
   <text x="51.0" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">Python</text>
-  <rect x="126.4" y="76" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".55"/>
+  <rect x="126.4" y="76" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".6"/>
   <text x="141.4" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">SQL</text>
-  <rect x="36.0" y="118" width="114.0" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".55"/>
+  <rect x="36.0" y="118" width="114.0" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".6"/>
   <text x="51.0" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">JavaScript</text>
-  <rect x="160.0" y="118" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".55"/>
+  <rect x="160.0" y="118" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".6"/>
   <text x="175.0" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">C++</text>
-  <rect x="225.2" y="118" width="63.6" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".55"/>
+  <rect x="225.2" y="118" width="63.6" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".6"/>
   <text x="240.2" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">Java</text>
-  <rect x="36.0" y="160" width="46.8" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".55"/>
+  <rect x="36.0" y="160" width="46.8" height="32" rx="16" fill="#0B1220" stroke="#4D7CFE" stroke-opacity=".6"/>
   <text x="51.0" y="181" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">C#</text>
   <text x="323.0" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" fill="#9B7CFF" letter-spacing="2" text-anchor="start">AI / ML</text>
-  <rect x="323.0" y="76" width="88.8" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".55"/>
+  <rect x="323.0" y="76" width="88.8" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".6"/>
   <text x="338.0" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">PyTorch</text>
-  <rect x="421.8" y="76" width="114.0" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".55"/>
+  <rect x="421.8" y="76" width="114.0" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".6"/>
   <text x="436.8" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">TensorFlow</text>
-  <rect x="323.0" y="118" width="130.8" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".55"/>
+  <rect x="323.0" y="118" width="130.8" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".6"/>
   <text x="338.0" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">scikit-learn</text>
-  <rect x="463.8" y="118" width="63.6" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".55"/>
+  <rect x="463.8" y="118" width="63.6" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".6"/>
   <text x="478.8" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">YOLO</text>
-  <rect x="323.0" y="160" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".55"/>
+  <rect x="323.0" y="160" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".6"/>
   <text x="338.0" y="181" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">OCR</text>
-  <rect x="388.2" y="160" width="105.6" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".55"/>
+  <rect x="388.2" y="160" width="105.6" height="32" rx="16" fill="#0B1220" stroke="#9B7CFF" stroke-opacity=".6"/>
   <text x="403.2" y="181" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">LLM / VLM</text>
   <text x="610.0" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" fill="#F0883E" letter-spacing="2" text-anchor="start">AGENTS &amp; APIS</text>
-  <rect x="610.0" y="76" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".55"/>
+  <rect x="610.0" y="76" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".6"/>
   <text x="625.0" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">MCP</text>
-  <rect x="675.2" y="76" width="88.8" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".55"/>
+  <rect x="675.2" y="76" width="88.8" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".6"/>
   <text x="690.2" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">GraphQL</text>
-  <rect x="774.0" y="76" width="63.6" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".55"/>
+  <rect x="774.0" y="76" width="63.6" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".6"/>
   <text x="789.0" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">REST</text>
-  <rect x="610.0" y="118" width="72.0" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".55"/>
+  <rect x="610.0" y="118" width="72.0" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".6"/>
   <text x="625.0" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">Flask</text>
-  <rect x="692.0" y="118" width="105.6" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".55"/>
+  <rect x="692.0" y="118" width="105.6" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".6"/>
   <text x="707.0" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">Streamlit</text>
-  <rect x="807.6" y="118" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".55"/>
+  <rect x="807.6" y="118" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#F0883E" stroke-opacity=".6"/>
   <text x="822.6" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">n8n</text>
   <text x="897.0" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="700" fill="#2DD4BF" letter-spacing="2" text-anchor="start">DATA &amp; DELIVERY</text>
-  <rect x="897.0" y="76" width="80.4" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".55"/>
+  <rect x="897.0" y="76" width="80.4" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".6"/>
   <text x="912.0" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">pandas</text>
-  <rect x="987.4" y="76" width="97.2" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".55"/>
+  <rect x="987.4" y="76" width="97.2" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".6"/>
   <text x="1002.4" y="97" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">Selenium</text>
-  <rect x="897.0" y="118" width="72.0" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".55"/>
+  <rect x="897.0" y="118" width="72.0" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".6"/>
   <text x="912.0" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">MySQL</text>
-  <rect x="979.0" y="118" width="80.4" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".55"/>
+  <rect x="979.0" y="118" width="80.4" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".6"/>
   <text x="994.0" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">Docker</text>
-  <rect x="1069.4" y="118" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".55"/>
+  <rect x="1069.4" y="118" width="55.2" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".6"/>
   <text x="1084.4" y="139" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">Git</text>
-  <rect x="897.0" y="160" width="147.6" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".55"/>
+  <rect x="897.0" y="160" width="147.6" height="32" rx="16" fill="#0B1220" stroke="#2DD4BF" stroke-opacity=".6"/>
   <text x="912.0" y="181" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" letter-spacing="0" text-anchor="start">GitHub Actions</text>
 </svg>

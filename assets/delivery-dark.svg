@@ -1,0 +1,56 @@
+<svg width="1200" height="212" viewBox="0 0 1200 212" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">How I deliver</title>
+  <desc id="desc">frame then data then model then integrate then ship then measure</desc>
+  <defs>
+    <linearGradient id="d-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111E"/><stop offset="1" stop-color="#150C2B"/>
+    </linearGradient>
+    <pattern id="d-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#1B2638" stroke-width="1" opacity=".55"/>
+    </pattern>
+  </defs>
+  <rect x=".5" y=".5" width="1199" height="211" rx="22" fill="url(#d-bg)" stroke="#23324A"/>
+  <rect x=".5" y=".5" width="1199" height="211" rx="22" fill="url(#d-grid)"/>
+
+  <rect x="36.0" y="36" width="174.7" height="140" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="36.0" y="36" width="5" height="140" rx="2.5" fill="#4D7CFE"/>
+  <text x="56.0" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="700" fill="#4D7CFE" letter-spacing="1" text-anchor="start">01</text>
+  <text x="56.0" y="94" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#F8FAFC" letter-spacing="0.8" text-anchor="start">FRAME</text>
+  <text x="56.0" y="128" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Clear goal,</text>
+  <text x="56.0" y="149" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">clear target.</text>
+  <path d="M212.7 106 h8" stroke="#3B4B66" stroke-width="2"/><path d="M220.7 102 l5 4 l-5 4z" fill="#3B4B66"/>
+  <rect x="226.7" y="36" width="174.7" height="140" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="226.7" y="36" width="5" height="140" rx="2.5" fill="#2DD4BF"/>
+  <text x="246.7" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="700" fill="#2DD4BF" letter-spacing="1" text-anchor="start">02</text>
+  <text x="246.7" y="94" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#F8FAFC" letter-spacing="0.8" text-anchor="start">DATA</text>
+  <text x="246.7" y="128" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Real data,</text>
+  <text x="246.7" y="149" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">made ready.</text>
+  <path d="M403.3 106 h8" stroke="#3B4B66" stroke-width="2"/><path d="M411.3 102 l5 4 l-5 4z" fill="#3B4B66"/>
+  <rect x="417.3" y="36" width="174.7" height="140" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="417.3" y="36" width="5" height="140" rx="2.5" fill="#9B7CFF"/>
+  <text x="437.3" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="700" fill="#9B7CFF" letter-spacing="1" text-anchor="start">03</text>
+  <text x="437.3" y="94" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#F8FAFC" letter-spacing="0.8" text-anchor="start">MODEL</text>
+  <text x="437.3" y="128" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">The right model</text>
+  <text x="437.3" y="149" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">for the job.</text>
+  <path d="M594.0 106 h8" stroke="#3B4B66" stroke-width="2"/><path d="M602.0 102 l5 4 l-5 4z" fill="#3B4B66"/>
+  <rect x="608.0" y="36" width="174.7" height="140" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="608.0" y="36" width="5" height="140" rx="2.5" fill="#F0883E"/>
+  <text x="628.0" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="700" fill="#F0883E" letter-spacing="1" text-anchor="start">04</text>
+  <text x="628.0" y="94" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#F8FAFC" letter-spacing="0.8" text-anchor="start">INTEGRATE</text>
+  <text x="628.0" y="128" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Fits the systems</text>
+  <text x="628.0" y="149" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">already in place.</text>
+  <path d="M784.7 106 h8" stroke="#3B4B66" stroke-width="2"/><path d="M792.7 102 l5 4 l-5 4z" fill="#3B4B66"/>
+  <rect x="798.7" y="36" width="174.7" height="140" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="798.7" y="36" width="5" height="140" rx="2.5" fill="#FBBF24"/>
+  <text x="818.7" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="700" fill="#FBBF24" letter-spacing="1" text-anchor="start">05</text>
+  <text x="818.7" y="94" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#F8FAFC" letter-spacing="0.8" text-anchor="start">SHIP</text>
+  <text x="818.7" y="128" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Live, monitored,</text>
+  <text x="818.7" y="149" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">supported.</text>
+  <path d="M975.3 106 h8" stroke="#3B4B66" stroke-width="2"/><path d="M983.3 102 l5 4 l-5 4z" fill="#3B4B66"/>
+  <rect x="989.3" y="36" width="174.7" height="140" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="989.3" y="36" width="5" height="140" rx="2.5" fill="#F472B6"/>
+  <text x="1009.3" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="700" fill="#F472B6" letter-spacing="1" text-anchor="start">06</text>
+  <text x="1009.3" y="94" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#F8FAFC" letter-spacing="0.8" text-anchor="start">MEASURE</text>
+  <text x="1009.3" y="128" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Evaluate, learn,</text>
+  <text x="1009.3" y="149" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">improve.</text>
+</svg>
