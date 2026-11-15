@@ -1,6 +1,6 @@
 <svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Mohamed Saleh: I build AI systems that hold up in production</title>
-  <desc id="desc">Mohamed Saleh, AI engineer: 3+ years shipping production AI, 4 systems in production, 1.7M+ records reconciled, 165 open benchmark tasks.</desc>
+  <desc id="desc">AI engineer working across agentic AI, document intelligence, computer vision, machine learning, NLP and AI evaluation.</desc>
   <style>
     .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 24s linear infinite; }
     .orbit.rev { animation-direction: reverse; animation-duration: 36s; }
@@ -44,15 +44,15 @@
   <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F0883E"/><stop offset="1" stop-color="#FBBF24"/></linearGradient>
   <rect class="trace" x=".5" y=".5" width="1199" height="419" rx="22" stroke="#2DD4BF" stroke-width="1.6" opacity=".7"/>
   <path d="M560 1 H640" stroke="#2DD4BF" stroke-width="2" opacity=".8"/>
-  <text x="64" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#2DD4BF" letter-spacing="2.6" text-anchor="start" class="rise r1">MOHAMED SALEH  /  AI ENGINEER  ·  AGENTS · DOCUMENT AI · VISION</text>
+  <text x="64" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="700" fill="#2DD4BF" letter-spacing="3" text-anchor="start" class="rise r1">MOHAMED SALEH  /  AI ENGINEER</text>
   <text x="64" y="158" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5" text-anchor="start" class="rise r2">I build AI systems</text>
   <text x="64" y="216" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5" text-anchor="start" class="rise r3">that hold up in</text>
   <text x="64" y="274" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="url(#accent)" letter-spacing="-0.5" text-anchor="start" class="rise r4">production.</text>
-  <text x="64" y="318" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start" class="rise r5">Agents, document AI and computer vision, owned from raw data to deployment.</text>
+  <text x="64" y="318" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="16.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start" class="rise r5">From raw data to deployed models and agents, and the evaluation that proves they work.</text>
   <path d="M64 344 H700" stroke="#1E2A3D" stroke-width="1"/>
   <circle class="pulse" cx="70" cy="368" r="4.5" fill="#2DD4BF"/>
-  <text x="84" y="372" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#CBD5E1" letter-spacing="1" text-anchor="start">3+ YEARS SHIPPING AI  ·  4 SYSTEMS IN PRODUCTION  ·  1.7M+ RECORDS RECONCILED  ·  165 OPEN BENCHMARK TASKS  ·  2× KAGGLE 1ST PLACE</text>
-  <text x="84" y="394" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="10" font-weight="400" fill="#64748B" letter-spacing="1" text-anchor="start">BENCHMARK COUNT READ LIVE FROM GITHUB  ·  2026-11-15 UTC</text>
+  <text x="84" y="372" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#CBD5E1" letter-spacing="1" text-anchor="start">AGENTIC AI  ·  DOCUMENT INTELLIGENCE  ·  COMPUTER VISION  ·  MACHINE LEARNING  ·  NLP  ·  AI EVALUATION</text>
+  <text x="84" y="394" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="10" font-weight="400" fill="#64748B" letter-spacing="1.2" text-anchor="start">FRAME  →  DATA  →  MODEL  →  INTEGRATE  →  SHIP  →  MEASURE</text>
   <circle cx="930" cy="200" r="190" fill="url(#glow)"/>
   <circle cx="930" cy="200" r="150" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="2 7"/>
   <g class="orbit"><circle cx="930" cy="200" r="118" stroke="#2DD4BF" stroke-width="1.4" stroke-dasharray="40 22 4 22" opacity=".55"/></g>

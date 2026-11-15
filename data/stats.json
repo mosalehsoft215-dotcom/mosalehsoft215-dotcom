@@ -1,19 +1,18 @@
 {
- "cases": 708,
- "day": "2026-11-15",
- "domains": 3,
- "fields": {
-  "earth-sciences/geosciences": 1,
-  "engineering-sciences/chemical-engineering": 12,
-  "engineering-sciences/civil-engineering": 15,
-  "engineering-sciences/electrical-engineering": 11,
-  "engineering-sciences/mechanical-engineering": 30,
-  "physical-sciences/astronomy": 14,
-  "physical-sciences/chemistry": 22,
-  "physical-sciences/materials-science": 26,
-  "physical-sciences/physics": 34
- },
- "hours": 1761,
- "stars": 2,
- "tasks": 165
+ "projects": [
+  {
+   "name": "Mosalehchatbot",
+   "url": "https://github.com/mosalehsoft215-dotcom/Mosalehchatbot",
+   "description": "Multi-conversation Streamlit chat assistant with image input and streaming replies, powered by Groq LLMs.",
+   "language": "Python",
+   "stars": 0,
+   "topics": [
+    "chatbot",
+    "groq",
+    "llm"
+   ],
+   "pushed": "2025-12-30"
+  }
+ ],
+ "updated": "202611152257"
 }
