@@ -1,0 +1,74 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">m.sale7: AI evaluation and scientific benchmarks</title>
+  <desc id="desc">165 benchmark tasks in 9 fields and 3 domains, 708 sealed cases, 1,761 expert hours, counted 2026-11-15.</desc>
+  <style>
+    .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 24s linear infinite; }
+    .orbit.rev { animation-direction: reverse; animation-duration: 36s; }
+    .signal { stroke-dasharray: 6 9; animation: signal 2.4s linear infinite; }
+    .pulse { animation: pulse 2.6s ease-in-out infinite; }
+    .wave { transform-box: fill-box; transform-origin: center; animation: wave 4.8s cubic-bezier(.16,1,.3,1) infinite; }
+    .wave.d { animation-delay: 2.4s; }
+    .check { stroke-dasharray: 60; stroke-dashoffset: 60; animation: check 5s cubic-bezier(.16,1,.3,1) infinite; }
+    .chip { animation: chip 8s cubic-bezier(.16,1,.3,1) infinite; }
+    .c2 { animation-delay: 2s; } .c3 { animation-delay: 4s; } .c4 { animation-delay: 6s; }
+    .rise { opacity: .3; animation: rise .9s cubic-bezier(.16,1,.3,1) forwards; }
+    .r1 { animation-delay: .1s; } .r2 { animation-delay: .22s; } .r3 { animation-delay: .34s; } .r4 { animation-delay: .5s; } .r5 { animation-delay: .66s; }
+    .trace { stroke-dasharray: 120 2600; animation: trace 12s linear infinite; }
+    .scan { animation: scan 6s cubic-bezier(.76,0,.24,1) infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes signal { to { stroke-dashoffset: -30; } }
+    @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+    @keyframes wave { 0% { opacity: .5; transform: scale(.7); } 75%, 100% { opacity: 0; transform: scale(1.5); } }
+    @keyframes check { 0%, 12% { stroke-dashoffset: 60; opacity: .3; } 32%, 84% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: .4; } }
+    @keyframes chip { 0%, 22%, 100% { opacity: .55; } 6%, 15% { opacity: 1; } }
+    @keyframes rise { from { opacity: .3; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes trace { to { stroke-dashoffset: -2720; } }
+    @keyframes scan { 0% { stroke-dashoffset: 520; opacity: 0; } 15% { opacity: 1; } 70% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .orbit, .signal, .pulse, .wave, .check, .chip, .rise, .trace, .scan { animation: none; opacity: 1; transform: none; stroke-dashoffset: 0; }
+      .wave { display: none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="h-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111E"/><stop offset="1" stop-color="#150C2B"/>
+    </linearGradient>
+    <pattern id="h-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#1B2638" stroke-width="1" opacity=".55"/>
+    </pattern>
+  </defs>
+  <rect x=".5" y=".5" width="1199" height="419" rx="22" fill="url(#h-bg)" stroke="#23324A"/>
+  <rect x=".5" y=".5" width="1199" height="419" rx="22" fill="url(#h-grid)"/>
+
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#2DD4BF" stop-opacity=".20"/><stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/></radialGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F0883E"/><stop offset="1" stop-color="#FBBF24"/></linearGradient>
+  <rect class="trace" x=".5" y=".5" width="1199" height="419" rx="22" stroke="#2DD4BF" stroke-width="1.6" opacity=".7"/>
+  <path d="M560 1 H640" stroke="#2DD4BF" stroke-width="2" opacity=".8"/>
+  <text x="64" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#2DD4BF" letter-spacing="3" text-anchor="start" class="rise r1">M.SALE7  /  AI EVALUATION &amp; SCIENTIFIC BENCHMARKS</text>
+  <text x="64" y="158" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5" text-anchor="start" class="rise r2">I build benchmarks</text>
+  <text x="64" y="216" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5" text-anchor="start" class="rise r3">where AI agents must</text>
+  <text x="64" y="274" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="50" font-weight="800" fill="url(#accent)" letter-spacing="-0.5" text-anchor="start" class="rise r4">earn every number.</text>
+  <text x="64" y="318" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start" class="rise r5">Raw instrument records in. Certified results out. Checked on sealed cases.</text>
+  <path d="M64 344 H700" stroke="#1E2A3D" stroke-width="1"/>
+  <circle class="pulse" cx="70" cy="368" r="4.5" fill="#2DD4BF"/>
+  <text x="84" y="372" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#CBD5E1" letter-spacing="1" text-anchor="start">LIVE COUNT  ·  165 BENCHMARK TASKS  /  9 FIELDS  /  3 DOMAINS  ·  708 SEALED CASES  ·  1,761 EXPERT HOURS</text>
+  <text x="84" y="394" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="10" font-weight="400" fill="#64748B" letter-spacing="1" text-anchor="start">MACHINE-COUNTED FROM GITHUB  ·  10,939 FILES SHIPPED  ·  2026-11-15 UTC</text>
+  <circle cx="930" cy="200" r="190" fill="url(#glow)"/>
+  <circle cx="930" cy="200" r="150" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="2 7"/>
+  <g class="orbit"><circle cx="930" cy="200" r="118" stroke="#2DD4BF" stroke-width="1.4" stroke-dasharray="40 22 4 22" opacity=".55"/></g>
+  <g class="orbit rev"><circle cx="930" cy="200" r="96" stroke="#9B7CFF" stroke-width="1" stroke-dasharray="3 9" opacity=".6"/></g>
+  <circle class="wave" cx="930" cy="200" r="66" stroke="#2DD4BF" stroke-width="1.5"/>
+  <circle class="wave d" cx="930" cy="200" r="66" stroke="#2DD4BF" stroke-width="1.5"/>
+  <circle cx="930" cy="200" r="62" fill="#0A1C26" stroke="#2DD4BF" stroke-width="2"/>
+  <circle cx="930" cy="200" r="46" stroke="#2DD4BF" stroke-width="1" opacity=".45"/>
+  <path class="scan" d="M888 178 l7 -8 l6 16 l6 -20 l6 22 l6 -16 l6 8" stroke="#4D7CFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="520" opacity=".0"/>
+  <path class="check" d="M910 204 l14 14 l28 -30" stroke="#F8FAFC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="signal" d="M762 96 L851 151" stroke="#4D7CFE" stroke-width="1.4" opacity=".75"/>
+  <g class="chip c1"><rect x="700" y="82" width="124" height="28" rx="14" fill="#0B1220" stroke="#4D7CFE" stroke-width="1.2"/><circle cx="715" cy="96" r="3.5" fill="#4D7CFE"/><text x="726" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="10.5" font-weight="700" fill="#4D7CFE" letter-spacing="1.6" text-anchor="start">RAW RECORDS</text></g>
+  <path class="signal" d="M1096 96 L1008 151" stroke="#9B7CFF" stroke-width="1.4" opacity=".75"/>
+  <g class="chip c2"><rect x="1050" y="82" width="91" height="28" rx="14" fill="#0B1220" stroke="#9B7CFF" stroke-width="1.2"/><circle cx="1065" cy="96" r="3.5" fill="#9B7CFF"/><text x="1076" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="10.5" font-weight="700" fill="#9B7CFF" letter-spacing="1.6" text-anchor="start">REDUCED</text></g>
+  <path class="signal" d="M762 326 L851 259" stroke="#2DD4BF" stroke-width="1.4" opacity=".75"/>
+  <g class="chip c3"><rect x="720" y="312" width="83" height="28" rx="14" fill="#0B1220" stroke="#2DD4BF" stroke-width="1.2"/><circle cx="735" cy="326" r="3.5" fill="#2DD4BF"/><text x="746" y="330" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="10.5" font-weight="700" fill="#2DD4BF" letter-spacing="1.6" text-anchor="start">SEALED</text></g>
+  <path class="signal" d="M1094 326 L1007 259" stroke="#F0883E" stroke-width="1.4" opacity=".75"/>
+  <g class="chip c4"><rect x="1040" y="312" width="107" height="28" rx="14" fill="#0B1220" stroke="#F0883E" stroke-width="1.2"/><circle cx="1055" cy="326" r="3.5" fill="#F0883E"/><text x="1066" y="330" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="10.5" font-weight="700" fill="#F0883E" letter-spacing="1.6" text-anchor="start">CERTIFIED</text></g>
+</svg>

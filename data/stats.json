@@ -1,0 +1,22 @@
+{
+ "cases": 708,
+ "day": "2026-11-15",
+ "domains": 3,
+ "fields": {
+  "earth-sciences/geosciences": 1,
+  "engineering-sciences/chemical-engineering": 12,
+  "engineering-sciences/civil-engineering": 15,
+  "engineering-sciences/electrical-engineering": 11,
+  "engineering-sciences/mechanical-engineering": 30,
+  "physical-sciences/astronomy": 14,
+  "physical-sciences/chemistry": 22,
+  "physical-sciences/materials-science": 26,
+  "physical-sciences/physics": 34
+ },
+ "fields_n": 9,
+ "files": 10939,
+ "hours": 1761,
+ "public_repos": 3,
+ "stars": 2,
+ "tasks": 165
+}

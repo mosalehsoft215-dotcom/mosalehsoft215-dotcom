@@ -1,0 +1,54 @@
+<svg width="1200" height="250" viewBox="0 0 1200 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">How every task is built</title>
+  <desc id="desc">Raw records, stated physics, silent conditions, a program, a sealed verdict.</desc>
+  <defs>
+    <linearGradient id="b-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111E"/><stop offset="1" stop-color="#150C2B"/>
+    </linearGradient>
+    <pattern id="b-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#1B2638" stroke-width="1" opacity=".55"/>
+    </pattern>
+  </defs>
+  <rect x=".5" y=".5" width="1199" height="249" rx="22" fill="url(#b-bg)" stroke="#23324A"/>
+  <rect x=".5" y=".5" width="1199" height="249" rx="22" fill="url(#b-grid)"/>
+
+  <rect x="36" y="36" width="206" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="36" y="36" width="5" height="178" rx="2.5" fill="#4D7CFE"/>
+  <text x="58" y="70" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#4D7CFE" letter-spacing="1" text-anchor="start">01</text>
+  <text x="58" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.6" text-anchor="start">RAW RECORDS</text>
+  <text x="58" y="136" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Counts, traces, logs and</text>
+  <text x="58" y="158" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">sheets, kept the way the</text>
+  <text x="58" y="180" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">lab or plant keeps them.</text>
+  <path d="M246 125 h14" stroke="#3B4B66" stroke-width="2"/><path d="M260 120 l6 5 l-6 5z" fill="#3B4B66"/>
+  <rect x="266" y="36" width="206" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="266" y="36" width="5" height="178" rx="2.5" fill="#9B7CFF"/>
+  <text x="288" y="70" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#9B7CFF" letter-spacing="1" text-anchor="start">02</text>
+  <text x="288" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.6" text-anchor="start">STATED PHYSICS</text>
+  <text x="288" y="136" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Every law a reduction</text>
+  <text x="288" y="158" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">needs is written in the</text>
+  <text x="288" y="180" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">notes. Nothing is a trick.</text>
+  <path d="M476 125 h14" stroke="#3B4B66" stroke-width="2"/><path d="M490 120 l6 5 l-6 5z" fill="#3B4B66"/>
+  <rect x="496" y="36" width="206" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="496" y="36" width="5" height="178" rx="2.5" fill="#2DD4BF"/>
+  <text x="518" y="70" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#2DD4BF" letter-spacing="1" text-anchor="start">03</text>
+  <text x="518" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.6" text-anchor="start">SILENT CONDITIONS</text>
+  <text x="518" y="136" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">What no sheet records:</text>
+  <text x="518" y="158" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">a drifted zero, a clock,</text>
+  <text x="518" y="180" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">a geometry. Only data shows.</text>
+  <path d="M706 125 h14" stroke="#3B4B66" stroke-width="2"/><path d="M720 120 l6 5 l-6 5z" fill="#3B4B66"/>
+  <rect x="726" y="36" width="206" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="726" y="36" width="5" height="178" rx="2.5" fill="#F0883E"/>
+  <text x="748" y="70" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#F0883E" letter-spacing="1" text-anchor="start">04</text>
+  <text x="748" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.6" text-anchor="start">A PROGRAM</text>
+  <text x="748" y="136" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Agents ship code, never</text>
+  <text x="748" y="158" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">typed numbers. It must</text>
+  <text x="748" y="180" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">hold on unseen cases.</text>
+  <path d="M936 125 h14" stroke="#3B4B66" stroke-width="2"/><path d="M950 120 l6 5 l-6 5z" fill="#3B4B66"/>
+  <rect x="956" y="36" width="206" height="178" rx="16" fill="#0B1220" stroke="#22314A"/>
+  <rect x="956" y="36" width="5" height="178" rx="2.5" fill="#FBBF24"/>
+  <text x="978" y="70" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#FBBF24" letter-spacing="1" text-anchor="start">05</text>
+  <text x="978" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14.5" font-weight="700" fill="#F8FAFC" letter-spacing="0.6" text-anchor="start">SEALED VERDICT</text>
+  <text x="978" y="136" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">Run offline on held-back</text>
+  <text x="978" y="158" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">cases. Reward 1 only if</text>
+  <text x="978" y="180" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#94A3B8" letter-spacing="0" text-anchor="start">every result is in limit.</text>
+</svg>
