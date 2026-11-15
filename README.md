@@ -73,6 +73,6 @@ Every number in a task traces back to a physical model of the specimen, the sky 
 
 <div align="center">
 
-<sub>The banner, cards and counts on this page are drawn by <a href="./scripts/refresh.py"><code>scripts/refresh.py</code></a> from the live repository.</sub>
+<sub>The banner, cards and counts on this page are drawn by <a href="./scripts/refresh.py"><code>scripts/refresh.py</code></a> from the live repository and redrawn by GitHub Actions whenever the counts change.</sub>
 
 </div>
