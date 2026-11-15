@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 USER = "mosalehsoft215-dotcom"
-HIDE = {USER, "reduction-bench"}          # repositories never shown as project cards
+HIDE = {USER}          # repositories never shown as project cards (empty repos and forks are skipped too)
 MAX_CARDS = 8
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
@@ -275,6 +275,9 @@ def project_card(p, kicker="PROJECT", private=False):
                  'stroke-linejoin="round" fill="none"/>')
     b.append("  " + text(32, 84, p["name"], 24, INK, SANS, 800, -0.2))
     desc = p["description"] or "Source code, setup and usage notes in the repository."
+    head = re.match(r"([^:]{2,40}):\s+(.+)", desc)  # drop a leading "<repo name>:" that repeats the title
+    if head and re.sub(r"[^a-z0-9]", "", head.group(1).lower()) == re.sub(r"[^a-z0-9]", "", p["name"].lower()):
+        desc = head.group(2)[:1].upper() + head.group(2)[1:]
     for k, ln in enumerate(textwrap.wrap(desc, 62)[:3]):
         b.append("  " + text(32, 116 + k * 22, ln, 14.5, MUTED, SANS))
     x = 32

@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="./assets/hero.svg?v=202611152323" width="100%" alt="Mohamed Saleh, AI engineer: I build AI systems that hold up in production. From raw data to deployed models and agents, and the evaluation that proves they work." />
+<img src="./assets/hero.svg?v=202611152333" width="100%" alt="Mohamed Saleh, AI engineer: I build AI systems that hold up in production. From raw data to deployed models and agents, and the evaluation that proves they work." />
 
 <br />
 
-<a href="https://www.linkedin.com/in/mohamed-saleh-013726274"><img src="./assets/badge-linkedin.svg?v=202611152323" height="30" alt="LinkedIn: connect" /></a>
-<a href="https://github.com/mosalehsoft215-dotcom?tab=repositories"><img src="./assets/badge-projects.svg?v=202611152323" height="30" alt="Projects: explore" /></a>
-<a href="https://github.com/mosalehsoft215-dotcom?tab=followers"><img src="./assets/badge-follow.svg?v=202611152323" height="30" alt="Follow on GitHub" /></a>
+<a href="https://www.linkedin.com/in/mohamed-saleh-013726274"><img src="./assets/badge-linkedin.svg?v=202611152333" height="30" alt="LinkedIn: connect" /></a>
+<a href="https://github.com/mosalehsoft215-dotcom?tab=repositories"><img src="./assets/badge-projects.svg?v=202611152333" height="30" alt="Projects: explore" /></a>
+<a href="https://github.com/mosalehsoft215-dotcom?tab=followers"><img src="./assets/badge-follow.svg?v=202611152333" height="30" alt="Follow on GitHub" /></a>
 
 <br />
 <br />
@@ -29,11 +29,11 @@ My recent work spans multi-agent assistants that run real business operations, d
 
 ## What I build
 
-<img src="./assets/capabilities.svg?v=202611152323" width="100%" alt="Agentic AI systems, document intelligence, computer vision, machine learning and NLP, data engineering, AI evaluation" />
+<img src="./assets/capabilities.svg?v=202611152333" width="100%" alt="Agentic AI systems, document intelligence, computer vision, machine learning and NLP, data engineering, AI evaluation" />
 
 ## How I deliver
 
-<img src="./assets/delivery.svg?v=202611152323" width="100%" alt="Frame, data, model, integrate, ship, measure" />
+<img src="./assets/delivery.svg?v=202611152333" width="100%" alt="Frame, data, model, integrate, ship, measure" />
 
 ## Selected work
 
@@ -41,11 +41,11 @@ Production systems I have built end to end. The code lives in private repositori
 
 <!-- work:start -->
 <p align="center">
-  <img src="./assets/work/travel-booking-agents.svg?v=202611152323" width="49%" alt="Travel Booking Agents: Router and specialist LLM agents for B2B travel over MCP tools, with role permissions, graph memory and evals." />
-  <img src="./assets/work/travel-docparser-ai.svg?v=202611152323" width="49%" alt="Travel DocParser AI: Turns PDFs and photos of travel documents into validated, enriched JSON with VLM OCR and a LangGraph agent." />
-  <img src="./assets/work/agentic-travel-backend.svg?v=202611152323" width="49%" alt="Agentic Travel Backend: Agent harness with an orchestrator, an MCP tool service, per-agent models, run logging and an evaluation library." />
-  <img src="./assets/work/agentic-price-aggregator.svg?v=202611152323" width="49%" alt="Agentic Price Aggregator: Multi-site price aggregation: cache, then self-healing browser replay, then LLM browser agents only when needed." />
-  <img src="./assets/work/platform-infrastructure.svg?v=202611152323" width="49%" alt="Platform Infrastructure: One-command local platform that mirrors production: gateway, queues, database, object storage and SSO." />
+  <img src="./assets/work/travel-booking-agents.svg?v=202611152333" width="49%" alt="Travel Booking Agents: Router and specialist LLM agents for B2B travel over MCP tools, with role permissions, graph memory and evals." />
+  <img src="./assets/work/travel-docparser-ai.svg?v=202611152333" width="49%" alt="Travel DocParser AI: Turns PDFs and photos of travel documents into validated, enriched JSON with VLM OCR and a LangGraph agent." />
+  <img src="./assets/work/agentic-travel-backend.svg?v=202611152333" width="49%" alt="Agentic Travel Backend: Agent harness with an orchestrator, an MCP tool service, per-agent models, run logging and an evaluation library." />
+  <img src="./assets/work/agentic-price-aggregator.svg?v=202611152333" width="49%" alt="Agentic Price Aggregator: Multi-site price aggregation: cache, then self-healing browser replay, then LLM browser agents only when needed." />
+  <img src="./assets/work/platform-infrastructure.svg?v=202611152333" width="49%" alt="Platform Infrastructure: One-command local platform that mirrors production: gateway, queues, database, object storage and SSO." />
 </p>
 <!-- work:end -->
 
@@ -53,13 +53,14 @@ Production systems I have built end to end. The code lives in private repositori
 
 <!-- projects:start -->
 <p align="center">
-  <a href="https://github.com/mosalehsoft215-dotcom/Mosalehchatbot"><img src="./assets/projects/Mosalehchatbot.svg?v=202611152323" width="49%" alt="Mosalehchatbot: Multi-conversation Streamlit chat assistant with image input and streaming replies, powered by Groq LLMs." /></a>
+  <a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/projects/reduction-bench.svg?v=202611152333" width="49%" alt="reduction-bench: Reduction-Bench: evaluating AI agents on turning raw measurement records into certified results across the physical, engineering and earth sciences." /></a>
+  <a href="https://github.com/mosalehsoft215-dotcom/Mosalehchatbot"><img src="./assets/projects/Mosalehchatbot.svg?v=202611152333" width="49%" alt="Mosalehchatbot: Multi-conversation Streamlit chat assistant with image input and streaming replies, powered by Groq LLMs." /></a>
 </p>
 <!-- projects:end -->
 
 ## Toolbox
 
-<img src="./assets/toolbox.svg?v=202611152323" width="100%" alt="Python, SQL, JavaScript, C++, Java, C#, PyTorch, TensorFlow, scikit-learn, YOLO, OCR, LLM and VLM, MCP, GraphQL, REST, Flask, Streamlit, n8n, pandas, Selenium, MySQL, Docker, Git, GitHub Actions" />
+<img src="./assets/toolbox.svg?v=202611152333" width="100%" alt="Python, SQL, JavaScript, C++, Java, C#, PyTorch, TensorFlow, scikit-learn, YOLO, OCR, LLM and VLM, MCP, GraphQL, REST, Flask, Streamlit, n8n, pandas, Selenium, MySQL, Docker, Git, GitHub Actions" />
 
 ## Engineering principles
 
