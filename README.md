@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Mohamed Saleh, AI engineer: I build AI systems that hold up in production. Agents, document AI and computer vision, owned from raw data to deployment." />
+<img src="./assets/hero.svg?v=202611152247" width="100%" alt="Mohamed Saleh, AI engineer: I build AI systems that hold up in production. Agents, document AI and computer vision, owned from raw data to deployment." />
 
 <br />
 
-<a href="https://www.linkedin.com/in/mohamed-saleh-013726274"><img src="./assets/badge-linkedin.svg" height="30" alt="LinkedIn: connect" /></a>
-<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/badge-bench.svg" height="30" alt="Reduction-Bench: open source" /></a>
-<a href="#recognition--education"><img src="./assets/badge-kaggle.svg" height="30" alt="Kaggle: 2x 1st place" /></a>
-<a href="https://github.com/mosalehsoft215-dotcom?tab=followers"><img src="./assets/badge-follow.svg" height="30" alt="Follow on GitHub" /></a>
+<a href="https://www.linkedin.com/in/mohamed-saleh-013726274"><img src="./assets/badge-linkedin.svg?v=202611152247" height="30" alt="LinkedIn: connect" /></a>
+<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/badge-bench.svg?v=202611152247" height="30" alt="Reduction-Bench: open source" /></a>
+<a href="#recognition--education"><img src="./assets/badge-kaggle.svg?v=202611152247" height="30" alt="Kaggle: 2x 1st place" /></a>
+<a href="https://github.com/mosalehsoft215-dotcom?tab=followers"><img src="./assets/badge-follow.svg?v=202611152247" height="30" alt="Follow on GitHub" /></a>
 
 <br />
 <br />
@@ -28,15 +28,15 @@ I own delivery end to end: data analysis and preprocessing, model research and t
 
 ## Impact at a glance
 
-<img src="./assets/impact.svg" width="100%" alt="3+ years shipping AI, 4 systems in production, 1.7M+ records reconciled, about 95% passport OCR accuracy, open benchmark tasks, 2x Kaggle 1st place" />
+<img src="./assets/impact.svg?v=202611152247" width="100%" alt="3+ years shipping AI, 4 systems in production, 1.7M+ records reconciled, about 95% passport OCR accuracy, open benchmark tasks, 2x Kaggle 1st place" />
 
 ## What I build
 
-<img src="./assets/capabilities.svg" width="100%" alt="Agentic AI systems, document intelligence, computer vision, AI evaluation" />
+<img src="./assets/capabilities.svg?v=202611152247" width="100%" alt="Agentic AI systems, document intelligence, computer vision, AI evaluation" />
 
 ## Selected work
 
-<img src="./assets/work.svg" width="100%" alt="Passport and ID document AI, multi-agent operations assistant, travel booking assistant, hotel data platform, document AI for marketplaces, facial recognition" />
+<img src="./assets/work.svg?v=202611152247" width="100%" alt="Passport and ID document AI, multi-agent operations assistant, travel booking assistant, hotel data platform, document AI for marketplaces, facial recognition" />
 
 <sub>Client and product names are left out on purpose; architecture and results can be walked through on request.</sub>
 
@@ -57,15 +57,15 @@ I own delivery end to end: data analysis and preprocessing, model research and t
 
 ## Open-source highlight
 
-<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/featured-reduction-bench.svg" width="100%" alt="Reduction-Bench: open benchmark for AI agents on raw scientific and engineering records" /></a>
+<a href="https://github.com/mosalehsoft215-dotcom/reduction-bench"><img src="./assets/featured-reduction-bench.svg?v=202611152247" width="100%" alt="Reduction-Bench: open benchmark for AI agents on raw scientific and engineering records" /></a>
 
 ## Experience
 
-<img src="./assets/timeline.svg" width="100%" alt="Reduction-Bench open source (2026), AI Developer at SafaSoft (2025 to now), AI Developer freelance (2023 to 2025), AI training and evaluation (2023 to 2024), B.Sc. Computer Science at Ain Shams University (2024), 1st place Kaggle computer vision (2021)" />
+<img src="./assets/timeline.svg?v=202611152247" width="100%" alt="Reduction-Bench open source (2026), AI Developer at SafaSoft (2025 to now), AI Developer freelance (2023 to 2025), AI training and evaluation (2023 to 2024), B.Sc. Computer Science at Ain Shams University (2024), 1st place Kaggle computer vision (2021)" />
 
 ## Toolbox
 
-<img src="./assets/toolbox.svg" width="100%" alt="Python, SQL, JavaScript, C++, Java, C#, PyTorch, TensorFlow, scikit-learn, YOLO, OCR and MRZ, LLM and VLM, MCP, GraphQL, REST, Flask, n8n, tool calling, pandas, Selenium, MySQL, Docker, Git, Power BI" />
+<img src="./assets/toolbox.svg?v=202611152247" width="100%" alt="Python, SQL, JavaScript, C++, Java, C#, PyTorch, TensorFlow, scikit-learn, YOLO, OCR and MRZ, LLM and VLM, MCP, GraphQL, REST, Flask, n8n, tool calling, pandas, Selenium, MySQL, Docker, Git, Power BI" />
 
 ## Recognition & education
 

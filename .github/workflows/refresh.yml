@@ -34,12 +34,12 @@ jobs:
 
       - name: Commit when the counts changed
         run: |
-          if [ -z "$(git status --porcelain assets data)" ]; then
+          if [ -z "$(git status --porcelain assets data README.md)" ]; then
             echo "Counts unchanged."
             exit 0
           fi
           git config user.name "mosalehsoft215-dotcom"
           git config user.email "mosalehsoft215-dotcom@users.noreply.github.com"
-          git add assets data
+          git add assets data README.md
           git commit -m "Refresh live counts"
           git push

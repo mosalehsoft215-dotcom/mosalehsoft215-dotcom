@@ -397,6 +397,12 @@ def main():
     for name, content in out.items():
         (ASSETS / name).write_text(content, encoding="utf-8", newline="\n")
     DATA.write_text(json.dumps({k: s[k] for k in keys + ("day",)}, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
+    # Version the image links so GitHub's image cache serves the redraw at once.
+    stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M")
+    readme = ROOT / "README.md"
+    md = readme.read_text(encoding="utf-8")
+    md = re.sub(r'(\./assets/[a-z0-9-]+\.svg)(\?v=\d+)?"', lambda m: f'{m.group(1)}?v={stamp}"', md)
+    readme.write_text(md, encoding="utf-8", newline="\n")
     print("wrote", len(out), "assets;", {k: s[k] for k in ("tasks", "cases", "hours", "stars", "day")})
 
 
