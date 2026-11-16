@@ -5,7 +5,7 @@
    "url": "https://github.com/mosalehsoft215-dotcom/reduction-bench",
    "description": "Reduction-Bench: evaluating AI agents on turning raw measurement records into certified results across the physical, engineering and earth sciences.",
    "language": "Python",
-   "stars": 2,
+   "stars": 3,
    "topics": [
     "agentic-evaluation",
     "ai-agents",
@@ -18,7 +18,7 @@
    "url": "https://github.com/mosalehsoft215-dotcom/Mosalehchatbot",
    "description": "Multi-conversation Streamlit chat assistant with image input and streaming replies, powered by Groq LLMs.",
    "language": "Python",
-   "stars": 0,
+   "stars": 1,
    "topics": [
     "chatbot",
     "groq",
@@ -27,5 +27,5 @@
    "pushed": "2025-12-30"
   }
  ],
- "updated": "202611152343"
+ "updated": "202611161113"
 }
